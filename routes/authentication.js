@@ -7,8 +7,9 @@ const passport = require("passport");
 
 // 5 - We need to tell our route handlers to use their corresponding strategies.
 
+// /authentication/sign-up
 authenticationRouter.get("/sign-up", (req, res, next) => {
-  res.render("sign-up", { title: "Sign Up" });
+  res.render("authentication/sign-up", { title: "Sign Up" });
 });
 
 authenticationRouter.post(
@@ -20,7 +21,7 @@ authenticationRouter.post(
 );
 
 authenticationRouter.get("/sign-in", (req, res, next) => {
-  res.render("sign-in");
+  res.render("authentication/sign-in");
 });
 
 authenticationRouter.post(
